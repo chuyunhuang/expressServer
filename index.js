@@ -1,4 +1,5 @@
 const math = require('./services/math')
+const img = require('./services/getImage')
 //Import Express Library
 const express = require('express');
 
@@ -45,6 +46,11 @@ app.get('/math/divide', (req, res) => {
   })
 })
 
+//Get Unsplash Image
+
+app.get('/image', (req, res)=>{
+  res.send('testing')
+})
 
 //Listening
 app.listen(port, () => {
